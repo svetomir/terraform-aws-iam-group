@@ -10,7 +10,7 @@ output "id" {
 
 output "members" {
     value = aws_iam_group_membership.main.0.users
-    description = "List of IAM User names"
+    description = "The list of group members."
 }
 
 output "name" {
@@ -25,7 +25,7 @@ output "path" {
 
 output "policy_arns" {
     value = aws_iam_group_policy_attachment.main.*.policy_arn
-    description = ""
+    description = "The ARNs of the policies applied to the group."
 }
 
 output "unique_id" {
