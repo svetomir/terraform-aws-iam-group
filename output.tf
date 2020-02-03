@@ -9,7 +9,7 @@ output "id" {
 }
 
 output "members" {
-    value = aws_iam_group_membership.main.0.users
+    value = length(var.members) > 0 ? aws_iam_group_membership.main.0.users : []
     description = "The list of group members."
 }
 
